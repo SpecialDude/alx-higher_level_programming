@@ -2,7 +2,6 @@
 import hidden_4
 
 if __name__ == "__main__":
-    print(
-        *list(filter(lambda x: not x.startswith('__'), dir(hidden_4))),
-        sep="\n"
-    )
+    for name in dir(hidden_4):
+        if not name.startswith('__'):
+            print(name))
