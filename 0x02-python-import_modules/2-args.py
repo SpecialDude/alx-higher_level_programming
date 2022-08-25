@@ -3,16 +3,16 @@ import sys
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    l = len(args)
+    length = len(args)
 
-    if l == 0:
+    if length == 0:
         end = 's.'
-    elif l == 1:
+    elif length == 1:
         end = ':'
     else:
         end = 's:'
 
-    print("{} argument{}".format(l, end))
+    print("{} argument{}".format(length, end))
 
-    for i in range(l):
+    for i in range(length):
         print("{}: {}".format(i + 1, args[i]))
