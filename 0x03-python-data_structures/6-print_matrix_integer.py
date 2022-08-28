@@ -15,7 +15,7 @@ def print_matrix_integer(matrix=[[]]):
     for i in range(row):
         col_str = ""
         for j in range(col):
-            col_str += "{:d}".format(matrix[i][j])
+            col_str += "{:>2d}".format(matrix[i][j])
             if j < col:
                 col_str += " "
         print(col_str)
