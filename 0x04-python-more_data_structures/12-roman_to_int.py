@@ -11,7 +11,7 @@ def roman_to_int(roman_string):
     roman_literals = ['I', 'V', 'X', 'L', 'C', 'D', 'M']
     equi_int = [1, 5, 10, 50, 100, 500, 1000]
 
-    if not roman_string:
+    if not roman_string or not isinstance(str):
         return 0
     if len(roman_string) == 1:
         return equi_int[roman_literals.index(roman_string)]
