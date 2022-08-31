@@ -9,7 +9,9 @@ def complex_delete(a_dictionary, value):
     Returns:
         Modified dictionary
     """
-    keys = list(filter(lambda x: a_dictionary[x] == value, a_dictionary.keys()))
+    keys = list(
+        filter(lambda x: a_dictionary[x] == value, a_dictionary.keys())
+    )
 
     for key in keys:
         del a_dictionary[key]
