@@ -24,5 +24,6 @@ void free_listint(listint_t *head);
 int is_palindrome(listint_t **head);
 listint_t *reverse_linked_list(listint_t *head);
 listint_t *duplicate_list(listint_t *head);
+listint_t *dup2(listint_t *head);
 
 #endif /* LISTS_H */
