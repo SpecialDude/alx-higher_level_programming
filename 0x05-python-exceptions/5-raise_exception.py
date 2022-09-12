@@ -9,4 +9,4 @@ def raise_exception():
     Returns:
         None
     """
-    raise Exception
+    raise Exception()
