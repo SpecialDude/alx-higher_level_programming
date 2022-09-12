@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-def safe_print_integer(value):
+import sys
+
+def safe_print_integer_err(value):
     """Safely Print an integer value
 
     Args:
@@ -13,5 +15,6 @@ def safe_print_integer(value):
     try:
         print("{:d}".format(value))
         return True
-    except Exception:
+    except Exception as err:
+        sys.stderr.write("Exception: {}\n".format(err))
         return False
