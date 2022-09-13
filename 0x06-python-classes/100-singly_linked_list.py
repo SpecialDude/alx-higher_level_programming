@@ -90,7 +90,7 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         new_node = Node(value)
 
-        if self.__head == None:
+        if self.__head is None:
             self.__head = new_node
             return
 
