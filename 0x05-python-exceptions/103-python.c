@@ -13,7 +13,7 @@ void print_python_float(PyObject *p);
  */
 void print_python_list(PyObject *p)
 {
-    int long size, i;
+    unsigned int long size, i;
     const char *type;
     PyListObject *list_object;
 
@@ -30,14 +30,14 @@ void print_python_list(PyObject *p)
     list_object = (PyListObject *)p;
     size = list_object->ob_base.ob_size;
 
-    printf("[*] Size of the Python List = %li\n", size);
-    printf("[*] Allocated = %li\n", list_object->allocated);
+    printf("[*] Size of the Python List = %lu\n", size);
+    printf("[*] Allocated = %lu\n", list_object->allocated);
 
     for (i = 0; i < size; i++)
     {
         type = list_object->ob_item[i]->ob_type->tp_name;
 
-        printf("Element %li: %s\n", i, type);
+        printf("Element %lu: %s\n", i, type);
 
         if (strcmp(type, "bytes") == 0)
             print_python_bytes(list_object->ob_item[i]);
@@ -54,7 +54,7 @@ void print_python_list(PyObject *p)
 void print_python_bytes(PyObject *p)
 {
     PyBytesObject *bytes_object;
-    int long size, chunk, i;
+    unsigned long size, chunk, i;
 
     setbuf(stdout, NULL);
     printf("[.] bytes object info\n");
@@ -69,12 +69,12 @@ void print_python_bytes(PyObject *p)
 
     size = bytes_object->ob_base.ob_size;
 
-    printf("  size: %li\n", size);
+    printf("  size: %lu\n", size);
     printf("  trying string: %s\n", bytes_object->ob_sval);
 
     chunk = (size >= 10) ? 10 : size + 1;
 
-    printf("  first %li bytes:", chunk);
+    printf("  first %lu bytes:", chunk);
 
     for (i = 0; i < chunk; i++)
         printf(" %02hhx", bytes_object->ob_sval[i]);
