@@ -81,7 +81,6 @@ void print_python_bytes(PyObject *p)
         printf(" %02hhx", bytes_object->ob_sval[i]);
     printf("\n");
 
-    fflush(stdout);
 }
 
 /**
@@ -111,7 +110,6 @@ void print_python_float(PyObject *p)
     if (value == (int)value)
         printf("  value: %#.2g\n", float_object->ob_fval);
     else
-        printf("  value: %.16g\n", float_object->ob_fval);
+        printf("  value: %.16gm\n", float_object->ob_fval);
 
-    fflush(stdout);
 }
