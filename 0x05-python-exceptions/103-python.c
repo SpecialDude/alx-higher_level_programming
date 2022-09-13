@@ -91,7 +91,6 @@ void print_python_bytes(PyObject *p)
 void print_python_float(PyObject *p)
 {
     PyFloatObject *float_object;
-    double value;
 
     setbuf(stdout, NULL);
     printf("[.] float object info\n");
@@ -105,11 +104,6 @@ void print_python_float(PyObject *p)
 
     float_object = (PyFloatObject *)p;
 
-    value = float_object->ob_fval;
-
-    if (value == (int)value)
-        printf("  value: %g\n", float_object->ob_fval);
-    else
-        printf("  value: %.16g\n", float_object->ob_fval);
+    printf("  value: %.16g\n", float_object->ob_fval);
 
 }
