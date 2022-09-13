@@ -106,7 +106,8 @@ void print_python_float(PyObject *p)
 
     value = float_object->ob_fval;
 
-    if (value == (int long long)value)
+
+    if (value - (int)value == 0)
         printf("  value: %#.1g\n", float_object->ob_fval);
     else
         printf("  value: %.16g\n", float_object->ob_fval);
