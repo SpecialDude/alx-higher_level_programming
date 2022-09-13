@@ -43,7 +43,7 @@ Element 1: int
 Element 2: int
 Element 3: float
 [.] float object info
-  value: 6.0
+  value: 6
 Element 4: tuple
 Element 5: list
 Element 6: bytes
@@ -88,16 +88,16 @@ Element 0: str
 [*] Allocated = 8
 Element 0: float
 [.] float object info
-  value: -1.0
+  value: -1
 Element 1: float
 [.] float object info
   value: -0.1
 Element 2: float
 [.] float object info
-  value: 0.0
+  value: 0
 Element 3: float
 [.] float object info
-  value: 1.0
+  value: 1
 Element 4: float
 [.] float object info
   value: 3.14
