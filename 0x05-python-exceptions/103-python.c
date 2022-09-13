@@ -112,4 +112,6 @@ void print_python_float(PyObject *p)
         printf("  value: %#.2g\n", float_object->ob_fval);
     else
         printf("  value: %.16g\n", float_object->ob_fval);
+
+    fflush(stdout);
 }
