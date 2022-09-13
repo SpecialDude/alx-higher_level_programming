@@ -91,6 +91,7 @@ void print_python_float(PyObject *p)
 {
     PyFloatObject *float_object;
     double value;
+    char *fstr;
 
     setbuf(stdout, NULL);
     printf("[.] float object info\n");
@@ -106,6 +107,11 @@ void print_python_float(PyObject *p)
 
     value = float_object->ob_fval;
 
+    fstr = PyOS_double_to_string(value, 'r', 0, Py_DTSF_ADD_DOT_0, NULL);
+
+    printf("  value: %s\n", fstr);
+
+    return;
 
     if (value - (int)value == 0.0)
         printf("  value: %#.1g\n", float_object->ob_fval);
