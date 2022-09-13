@@ -79,7 +79,7 @@ class Square:
         """Sets the instance position"""
 
         self.__validator(position=value)
-        self.__size = value
+        self.__position = value
 
     def my_print(self):
         """Prints a square with size"""
