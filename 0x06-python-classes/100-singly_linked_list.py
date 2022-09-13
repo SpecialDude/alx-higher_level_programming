@@ -120,4 +120,4 @@ class SinglyLinkedList:
             rep += str.format('{:d}\n', current.data)
             current = current.next_node
 
-        return rep
+        return rep.rstrip('\n')
