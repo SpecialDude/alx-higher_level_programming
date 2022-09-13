@@ -23,7 +23,7 @@ void print_python_list(PyObject *p)
 
     if (strcmp(p->ob_type->tp_name, "list") != 0)
     {
-        printf("  [ERROR] Invalid List Object");
+        printf("  [ERROR] Invalid List Object\n");
         return;
     }
 
