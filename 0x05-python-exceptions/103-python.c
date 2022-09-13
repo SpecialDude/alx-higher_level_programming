@@ -21,7 +21,7 @@ void print_python_list(PyObject *p)
     printf("[*] Python list info\n");
 
 
-    if (strcmp(p->ob_type->tp_name, "list") != 0)
+    if (!PyList_Check(p))
     {
         printf("  [ERROR] Invalid List Object");
         return;
