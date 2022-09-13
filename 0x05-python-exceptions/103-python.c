@@ -59,7 +59,6 @@ void print_python_bytes(PyObject *p)
     setbuf(stdout, NULL);
     printf("[.] bytes object info\n");
 
-
     if (strcmp(p->ob_type->tp_name, "bytes") != 0)
     {
         printf("  [ERROR] Invalid Bytes Object\n");
@@ -91,6 +90,7 @@ void print_python_bytes(PyObject *p)
 void print_python_float(PyObject *p)
 {
     PyFloatObject *float_object;
+    double value;
 
     setbuf(stdout, NULL);
     printf("[.] float object info\n");
@@ -104,6 +104,11 @@ void print_python_float(PyObject *p)
 
     float_object = (PyFloatObject *)p;
 
-    printf("  value: %.16g\n", float_object->ob_fval);
+    value = float_object->ob_fval;
+
+    if (value == (int long)value)
+        printf("  value: %.1f\n", float_object->ob_fval);
+    else
+        printf("  value: %.16g\n", float_object->ob_fval);
 
 }
