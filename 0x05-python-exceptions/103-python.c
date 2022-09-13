@@ -69,6 +69,7 @@ void print_python_bytes(PyObject *p)
     bytes_object = (PyBytesObject *)p;
 
     size = bytes_object->ob_base.ob_size;
+
     printf("  size: %li\n", size);
     printf("  trying string: %s\n", bytes_object->ob_sval);
 
@@ -79,6 +80,8 @@ void print_python_bytes(PyObject *p)
     for (i = 0; i < chunk; i++)
         printf(" %02hhx", bytes_object->ob_sval[i]);
     printf("\n");
+
+    fflush(stdout);
 }
 
 /**
