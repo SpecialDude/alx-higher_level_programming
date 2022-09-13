@@ -111,11 +111,5 @@ void print_python_float(PyObject *p)
 
     printf("  value: %s\n", fstr);
 
-    return;
-
-    if (value - (int)value == 0.0)
-        printf("  value: %#.1g\n", float_object->ob_fval);
-    else
-        printf("  value: %.16g\n", float_object->ob_fval);
-
+    PyMem_Free(fstr);
 }
