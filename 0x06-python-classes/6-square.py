@@ -83,5 +83,5 @@ class Square:
         if self.__size == 0:
             print()
             return
-        c = (" " * self.__position[0]) + "#"
+        c = ("_" * self.__position[0]) + "#"
         print(((c * self.__size) + "\n") * self.__size, end="")
