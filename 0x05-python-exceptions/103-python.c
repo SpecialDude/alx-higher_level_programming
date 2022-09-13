@@ -23,7 +23,7 @@ void print_python_list(PyObject *p)
 
     if (strcmp(p->ob_type->tp_name, "list") != 0)
     {
-        fprintf(stderr, "  [ERROR] Invalid List Object");
+        printf("  [ERROR] Invalid List Object");
         return;
     }
 
@@ -36,7 +36,7 @@ void print_python_list(PyObject *p)
     for (i = 0; i < size; i++)
     {
         type = list_object->ob_item[i]->ob_type->tp_name;
-        
+
         printf("Element %li: %s\n", i, type);
 
         if (strcmp(type, "bytes") == 0)
@@ -62,12 +62,9 @@ void print_python_bytes(PyObject *p)
 
     if (strcmp(p->ob_type->tp_name, "bytes") != 0)
     {
-        fprintf(stderr, "  [ERROR] Invalid Bytes Object\n");
+        printf("  [ERROR] Invalid Bytes Object\n");
         return;
     }
-
-
-
 
     bytes_object = (PyBytesObject *)p;
 
@@ -100,7 +97,7 @@ void print_python_float(PyObject *p)
 
     if (strcmp(p->ob_type->tp_name, "float") != 0)
     {
-        fprintf(stderr, "  [ERROR] Invalid Float Object\n");
+        printf("  [ERROR] Invalid Float Object\n");
         return;
     }
 
