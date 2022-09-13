@@ -108,8 +108,8 @@ void print_python_float(PyObject *p)
     value = float_object->ob_fval;
 
     if (value == (int)value)
-        printf("  value: %#.2g\n", float_object->ob_fval);
+        printf("  value: %#.2gm\n", float_object->ob_fval);
     else
-        printf("  value: %.16gm\n", float_object->ob_fval);
+        printf("  value: %.16g\n", float_object->ob_fval);
 
 }
