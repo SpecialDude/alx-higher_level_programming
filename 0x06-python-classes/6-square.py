@@ -88,4 +88,5 @@ class Square:
             print()
             return
         c = " " * self.__position[0]
+        print("\n" * self.__position[1], end="")
         print((c + ("#" * self.__size) + "\n") * self.__size, end="")
