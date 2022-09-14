@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""I swear y'all are bunch of crazy people
-Yeah I said it (Crazy people)
-"""
-
+"""I swear y'all are bunch of crazy people"""
 import math
 
 
 class MagicClass:
+    """Some class Definition"""
     def __init__(self, radius):
         """Initialization of circle"""
         self.__radius = 0
