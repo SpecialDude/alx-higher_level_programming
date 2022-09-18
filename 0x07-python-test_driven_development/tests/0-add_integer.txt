@@ -1,0 +1,41 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Add two integers
+
+Args:
+    a: integer
+    b: also integer
+
+Returns:
+    sum of a and b
+
+Firt, import the module
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(10, 5)
+15
+>>> add_integer(10, )
+108
+>>> add_integer(10, 19.45)
+29
+>>> add_integer(10, "19.45")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+>>> add_integer("10", "19.45")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(10.905, 19.45)
+29
+>>> add_integer(5545454, 65904.85)
+5611358
+>>> add_integer(-5, 0.85)
+-5
+>>> add_integer(-9.56, -10.45)
+-19
