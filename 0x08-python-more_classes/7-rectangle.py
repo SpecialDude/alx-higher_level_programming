@@ -74,7 +74,7 @@ class Rectangle:
 
         row = ("{}".format(Rectangle.print_symbol)) * self.width
         # rect = (row + "\n") * (self.height - 1)
-
+        rect = ''
         for i in range(self.height - 1):
             rect += row + "\n"
 
