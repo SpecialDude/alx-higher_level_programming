@@ -74,7 +74,7 @@ class Rectangle:
 
         row = Rectangle.print_symbol * self.width
 
-        rect = (row + "\n") * self.height - 1
+        rect = (row + "\n") * (self.height - 1)
         rect += row
 
         return rect
