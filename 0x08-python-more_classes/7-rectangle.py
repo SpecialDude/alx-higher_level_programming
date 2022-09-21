@@ -72,7 +72,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
 
-        row = Rectangle.print_symbol * self.width
+        row = str(Rectangle.print_symbol) * self.width
 
         rect = (row + "\n") * (self.height - 1)
         rect += row
