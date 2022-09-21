@@ -72,22 +72,17 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
 
-        # row = ("{}".format(Rectangle.print_symbol)) * self.width
-        # # rect = (row + "\n") * (self.height - 1)
-        # rect = ''
-        # for i in range(self.height - 1):
-        #     rect += row + "\n"
+        row = ("{}".format(Rectangle.print_symbol)) * self.width
+        # rect = (row + "\n") * (self.height - 1)
+        rect = ''
+        for i in range(self.height - 1):
+            for _ in range(self.width):
+                rect += "{}".format(Rectangle.print_symbol)
+            rect += "\n"
 
-        # rect += row
+        rect += row
 
-        # return rect
-
-        rec_str = ''
-        for i in range(self.__height):
-            for j in range(self.__width):
-                rec_str += str(self.print_symbol)
-            rec_str += '\n'
-        return rec_str[:-1]
+        return rect
 
     def __repr__(self):
         """Official String Representation of class"""
