@@ -1,0 +1,44 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+Indent a text
+
+Args:
+    text: str
+
+Returns:
+    None
+
+import the module
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+>>> text_indentation("Quonam modo?")
+Quonam modo?
+>>> text_indentation(4)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation(["consectetur adipiscing elit."])
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+>>> text_indentation("quam dico. Utinam quidem dicerent")
+quam dico.
+<BLANKLINE>
+Utinam quidem dicerent
+>>> text_indentation("Teneo. inquit? finem illi videri nihil dolere.")
+Teneo.
+<BLANKLINE>
+inquit?
+<BLANKLINE>
+finem illi videri nihil dolere.
+>>> text_indentation("quam dico. Utinam quidem dicerent alium alio")
+quam dico.
+<BLANKLINE>
+Utinam quidem dicerent alium alio
