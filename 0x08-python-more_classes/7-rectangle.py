@@ -79,8 +79,9 @@ class Rectangle:
             for _ in range(self.width):
                 rect += "{}".format(Rectangle.print_symbol)
 
-            if i < self.height - 1:
-                rect += "\n"
+            if i == self.height - 1:
+                break
+            rect += "\n"
 
         return rect
 
