@@ -74,9 +74,10 @@ class Rectangle:
 
         row = Rectangle.print_symbol * self.width
 
-        rect = (row + "\n") * self.height
+        rect = (row + "\n") * self.height - 1
+        rect += row
 
-        return (rect.rstrip("\n"))
+        return rect
 
     def __repr__(self):
         """Official String Representation of class"""
