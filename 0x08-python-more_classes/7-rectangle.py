@@ -72,15 +72,15 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
 
-        row = ("{}".format(Rectangle.print_symbol)) * self.width
+        # row = ("{}".format(Rectangle.print_symbol)) * self.width
         # rect = (row + "\n") * (self.height - 1)
         rect = ''
-        for i in range(self.height - 1):
+        for i in range(self.height):
             for _ in range(self.width):
                 rect += "{}".format(Rectangle.print_symbol)
-            rect += "\n"
 
-        rect += row
+            if i < self.height - 1:
+                rect += "\n"
 
         return rect
 
