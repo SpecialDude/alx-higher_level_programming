@@ -9,7 +9,7 @@ class Rectangle:
     """A Rectangle class with few definitions"""
 
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """Initialization Method"""
@@ -73,8 +73,11 @@ class Rectangle:
             return ""
 
         row = ("{}".format(Rectangle.print_symbol)) * self.width
+        # rect = (row + "\n") * (self.height - 1)
 
-        rect = (row + "\n") * (self.height - 1)
+        for i in range(self.height - 1):
+            rect += row + "\n"
+
         rect += row
 
         return rect
