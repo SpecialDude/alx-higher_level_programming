@@ -4,7 +4,7 @@
 This module contains a single function to return
 the json representation of objects
 
-write_file()
+to_json_string()
 """
 
 
