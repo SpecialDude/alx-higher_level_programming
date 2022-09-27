@@ -2,7 +2,8 @@
 
 """
 This is script dumps all arguments to a json file
-
+All command line arguments are stored in a json
+file add_item.json
 """
 
 
