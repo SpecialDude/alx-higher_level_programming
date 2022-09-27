@@ -12,7 +12,7 @@ import json
 
 
 def save_to_json_file(my_obj, filename):
-    """Object representation of json strin
+    """Saves json string of objects
 
     Args:
         my_obj: A python object
