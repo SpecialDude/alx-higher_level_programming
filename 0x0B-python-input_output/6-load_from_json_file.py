@@ -21,5 +21,5 @@ def load_from_json_file(filename):
         Python object
     """
 
-    with open(filename, mode='r', encoding="UTF-8") as fd:
+    with open(filename, mode='r') as fd:
         return json.load(fd)
