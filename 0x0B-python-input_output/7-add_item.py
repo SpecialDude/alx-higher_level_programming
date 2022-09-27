@@ -8,6 +8,7 @@ file add_item.json
 
 
 import sys
+import os
 
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 load_from_json_file = __import__(
@@ -16,9 +17,13 @@ load_from_json_file = __import__(
 
 
 filename = "add_item.json"
+e_args = []
+
 args = sys.argv[1:]
 
-e_args = load_from_json_file(filename)
-args.extend(e_args)
+if os.path.exists(filename):
+    e_args = load_from_json_file(filename)
 
-save_to_json_file(args, filename)
+e_args.extend(args)
+
+save_to_json_file(e_args, filename)
