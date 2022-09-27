@@ -22,7 +22,10 @@ e_args = []
 args = sys.argv[1:]
 
 if os.path.exists(filename):
-    e_args = load_from_json_file(filename)
+    data = load_from_json_file(filename)
+
+    if isinstance(data, list):
+        e_args = data
 
 e_args.extend(args)
 
