@@ -26,5 +26,6 @@ def main():
         print("N must be at least 4")
         exit(1)
 
-
-main()
+if __name__ == "__main__":
+    main()
+    
