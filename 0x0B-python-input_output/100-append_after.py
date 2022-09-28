@@ -25,7 +25,7 @@ def append_after(filename="", search_string="", new_string=""):
         for line in fd:
             line = line.rstrip('\n')
             lines.append(line + '\n')
-            if search_string in line:
+            if search_string.lower() in line.lower():
                 lines.append(new_string + '\n')
     if lines:
         with open(filename, mode="w") as fd:
