@@ -1,0 +1,48 @@
+Test Cases for the class extending the builtin class MyList
+===========================================================
+                                                     By AWA
+===========================================================
+
+
+First import module
+
+>>> MyList = __import__("1-my_list").MyList
+
+Now Tests
+
+>>> myl = MyList([1, 4, 2, 3, 5])
+>>> myl
+[1, 4, 2, 3, 5]
+>>> myl.print_sorted()
+[1, 2, 3, 4, 5]
+>>> myl
+[1, 4, 2, 3, 5]
+>>> li = MyList([3, 0, 8])
+>>> li
+[3, 0, 8]
+>>> li.print_sorted()
+[0, 3, 8]
+>>> li
+[3, 0, 8]
+>>> li = [3, 7, 5]
+>>> myli = MyList(li)
+>>> myli
+[3, 7, 5]
+>>> myli.print_sorted()
+[3, 5, 7]
+>>> myli
+[3, 7, 5]
+>>> e_list = MyList()
+>>> e_list
+[]
+>>> e_list.print_sorted()
+[]
+>>> e_list.append('B')
+>>> e_list.append('r')
+>>> e_list.append('a')
+>>> e_list.append('i')
+>>> e_list.append('n')
+>>> e_list
+['B', 'r', 'a', 'i', 'n']
+>>> e_list.print_sorted()
+['B', 'a', 'i', 'n', 'r']
