@@ -37,17 +37,6 @@ class MyList(list):
 
         Returns:
             None
-
-        >>> li = [3, 7, 5]
-        >>> myli = MyList(li)
-        >>> myli
-        [3, 7, 5]
-        >>> myli.print_sorted()
-        [3, 5, 7]
-        >>> myli
-        [3, 7, 5]
         """
 
-        list_copy = self[:]
-        list_copy.sort()
-        print('{}'.format(list_copy))
+        print('{}'.format(sorted(self)))
