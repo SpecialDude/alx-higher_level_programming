@@ -9,5 +9,5 @@ to a class
 def add_attribute(instance, name, value):
     """Add attribute to instance of a class"""
 
-    if not hasattr(instance, '__slot__'):
-        setattr(instance, name, value)
+    # if not hasattr(instance, '__slot__'):
+    setattr(instance, name, value)
