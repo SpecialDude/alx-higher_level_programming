@@ -70,4 +70,7 @@ TypeError: set must be an integer
 Traceback (most recent call last):
   ...
 TypeError: nan must be an integer
->>> b.integer_validator("High", 43423322125967505454900458000012120000034343439)
+>>> b.integer_validator("tuple", (3, 5))
+Traceback (most recent call last):
+  ...
+TypeError: tuple must be an integer
