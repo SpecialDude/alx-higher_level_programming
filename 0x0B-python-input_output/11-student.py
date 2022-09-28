@@ -51,5 +51,5 @@ class Student:
         Returns:
             None
         """
-        for ele in json.items():
-            self.__dict__.update(ele)
+        for key, value in json.items():
+            self.__dict__.update({key, value})
