@@ -11,10 +11,10 @@ import sys
 file_size = 0
 
 status_codes = {
-    200: 0, 301: 0,
-    400: 0, 401: 0,
-    403: 0, 404: 0,
-    405: 0, 500: 0
+    '200': 0, '301': 0,
+    '400': 0, '401': 0,
+    '403': 0, '404': 0,
+    '405': 0, '500': 0
 }
 
 i = 0
@@ -27,11 +27,14 @@ while True:
         metrics = line.split()
 
         size = int(metrics[-1])
-        status = int(metrics[-2])
+        status = metrics[-2]
+
+        status_codes[status] = status_codes[status] + 1
+        file_size += size
 
         i += 1
 
-        if i == 10:
+        if i == 4:
 
             print("File size: {}".format(file_size))
 
