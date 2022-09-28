@@ -48,4 +48,6 @@ class MyList(list):
         [3, 7, 5]
         """
 
-        print(list(sorted(self)))
+        list_copy = self[:]
+        list_copy.sort()
+        print('{}'.format(list_copy))
