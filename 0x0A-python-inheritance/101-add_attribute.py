@@ -6,7 +6,7 @@ to a class
 """
 
 
-def add_attribute(instance:object, name, value):
+def add_attribute(instance, name, value):
     """Add attribute to instance of a class"""
 
     if not hasattr(instance, '__slot__'):
