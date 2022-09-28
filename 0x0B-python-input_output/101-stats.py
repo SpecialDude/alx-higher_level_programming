@@ -27,7 +27,7 @@ def main():
     while True:
         try:
             if sys.stdin.isatty():
-                continue
+                break
 
             line = sys.stdin.readline().rstrip("\n")
 
