@@ -46,3 +46,11 @@ ValueError:  must be greater than 0
 Traceback (most recent call last):
   ...
 Exception: area() is not implemented
+>>> b.integer_validator("string", "John")
+Traceback (most recent call last):
+  ...
+TypeError: string must be an integer
+>>> b.integer_validator("array", [3, 5, 9])
+Traceback (most recent call last):
+  ...
+TypeError: array must be an integer
