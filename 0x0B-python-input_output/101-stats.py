@@ -49,9 +49,7 @@ def main():
                     if value == 0:
                         continue
                     print("{}: {:d}".format(key, value))
-                    status_codes[key] = 0
-
-                file_size = 0
+                    
                 i = 0
         except KeyboardInterrupt:
             print("File size: {}".format(file_size))
