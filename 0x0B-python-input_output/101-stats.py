@@ -41,7 +41,7 @@ def main():
 
             i += 1
 
-            if i == 4:
+            if i == 10:
 
                 print("File size: {}".format(file_size))
 
