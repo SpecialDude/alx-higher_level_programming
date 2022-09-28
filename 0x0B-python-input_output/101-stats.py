@@ -9,52 +9,60 @@ Just another program that does a thing with a thing
 import sys
 
 
-file_size = 0
+def main():
+    """
+    Program Entry point
+    """
 
-status_codes = {
-    '200': 0, '301': 0,
-    '400': 0, '401': 0,
-    '403': 0, '404': 0,
-    '405': 0, '500': 0
-}
+    file_size = 0
 
-i = 0
+    status_codes = {
+        '200': 0, '301': 0,
+        '400': 0, '401': 0,
+        '403': 0, '404': 0,
+        '405': 0, '500': 0
+    }
 
-while True:
-    try:
-        if sys.stdin.isatty():
-            continue
-        
-        line = sys.stdin.readline().rstrip("\n")
+    i = 0
+    while True:
+        try:
+            if sys.stdin.isatty():
+                continue
 
-        metrics = line.split()
+            line = sys.stdin.readline().rstrip("\n")
 
-        size = int(metrics[-1])
-        status = metrics[-2]
+            metrics = line.split()
 
-        status_codes[status] = status_codes[status] + 1
-        file_size += size
+            size = int(metrics[-1])
+            status = metrics[-2]
 
-        i += 1
+            status_codes[status] = status_codes[status] + 1
+            file_size += size
 
-        if i == 4:
+            i += 1
 
+            if i == 4:
+
+                print("File size: {}".format(file_size))
+
+                for key, value in status_codes.items():
+                    if value == 0:
+                        continue
+                    print("{}: {:d}".format(key, value))
+                    status_codes[key] = 0
+
+                file_size = 0
+                i = 0
+        except KeyboardInterrupt:
             print("File size: {}".format(file_size))
 
             for key, value in status_codes.items():
                 if value == 0:
                     continue
                 print("{}: {:d}".format(key, value))
-                status_codes[key] = 0
 
-            file_size = 0
-            i = 0
-    except KeyboardInterrupt:
-        print("File size: {}".format(file_size))
+            raise
 
-        for key, value in status_codes.items():
-            if value == 0:
-                continue
-            print("{}: {:d}".format(key, value))
 
-        raise
+if __name__ == "__main__":
+    main()
