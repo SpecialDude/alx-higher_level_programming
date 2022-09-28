@@ -70,4 +70,3 @@ TypeError: set must be an integer
 Traceback (most recent call last):
   ...
 TypeError: nan must be an integer
->>> b.
