@@ -35,6 +35,8 @@ Now Tests
 >>> e_list = MyList()
 >>> e_list
 []
+>>> e_list.print_sorted()
+[]
 >>> e_list.append('B')
 >>> e_list.append('r')
 >>> e_list.append('a')
