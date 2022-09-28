@@ -5,6 +5,7 @@ Module contain a single class having
 a method to return instances as json
 """
 
+
 class Student:
     """
     A simple class with a method to return
