@@ -24,8 +24,8 @@ try:
 
         metrics = line.split()
 
-        size = metrics[-1]
-        status = metrics[-2]
+        size = int(metrics[-1])
+        status = int(metrics[-2])
 
         i += 1
 
