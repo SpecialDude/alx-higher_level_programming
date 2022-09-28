@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""A rebel Integer class subclassing the
+builtin int class
+"""
+
+
 class MyInt(int):
     """MyInt is a rebel, it has its equality operations reversed"""
 
