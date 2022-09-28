@@ -32,3 +32,15 @@ Now Tests
 [3, 5, 7]
 >>> myli
 [3, 7, 5]
+>>> e_list = MyList()
+>>> e_list
+[]
+>>> e_list.append('B')
+>>> e_list.append('r')
+>>> e_list.append('a')
+>>> e_list.append('i')
+>>> e_list.append('n')
+>>> e_list
+['B', 'r', 'a', 'i', 'n']
+>>> e_list.print_sorted()
+['B', 'a', 'i', 'n', 'r']
