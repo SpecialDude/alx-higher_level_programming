@@ -54,3 +54,15 @@ TypeError: string must be an integer
 Traceback (most recent call last):
   ...
 TypeError: array must be an integer
+>>> b.integer_validator("bool", True)
+Traceback (most recent call last):
+  ...
+TypeError: bool must be an integer
+>>> b.integer_validator("none", None)
+Traceback (most recent call last):
+  ...
+TypeError: none must be an integer
+>>> b.integer_validator("set", {3, 5, 9})
+Traceback (most recent call last):
+  ...
+TypeError: set must be an integer
