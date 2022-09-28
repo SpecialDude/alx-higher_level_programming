@@ -19,8 +19,9 @@ status_codes = {
 
 i = 0
 
-try:
-    while True:
+
+while True:
+    try:
         line = sys.stdin.readline().rstrip("\n")
 
         metrics = line.split()
@@ -42,12 +43,12 @@ try:
 
             file_size = 0
             i = 0
-except KeyboardInterrupt:
-    print("File size: {}".format(file_size))
+    except KeyboardInterrupt:
+        print("File size: {}".format(file_size))
 
-    for key, value in status_codes.items():
-        if value == 0:
-            continue
-        print("{}: {:d}".format(key, value))
+        for key, value in status_codes.items():
+            if value == 0:
+                continue
+            print("{}: {:d}".format(key, value))
 
-    raise
+        raise
