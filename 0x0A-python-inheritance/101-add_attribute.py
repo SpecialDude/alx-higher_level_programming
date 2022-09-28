@@ -9,7 +9,8 @@ to a class
 def add_attribute(instance, name, value):
     """Add attribute to instance of a class"""
 
-    if not hasattr(instance, '__slots__'):
+    if hasattr(instance, '__dict__'):
         setattr(instance, name, value)
-    else:
+
+    elif hasattr(instance, '__slots__'):
         raise TypeError("can't add new attribute")
