@@ -16,7 +16,7 @@ def class_to_json(obj):
         filename: str
 
     Returns:
-        None
+        dict
     """
 
     return obj.__dict__
