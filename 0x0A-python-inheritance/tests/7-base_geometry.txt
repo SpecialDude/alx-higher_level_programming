@@ -1,0 +1,35 @@
+Test Cases for the BaseGeometry class
+===========================================================
+                                                     By AWA
+===========================================================
+
+
+First import class
+
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Now Tests
+
+>>> b = BaseGeometry()
+>>> b.integer_validator()
+Traceback (most recent call last):
+  ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> b.integer_validator('sumnum')
+Traceback (most recent call last):
+  ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> b.integer_validator("sumnum", 3)
+>>> b.integer_validator("sumnum", 0)
+Traceback (most recent call last):
+  ...
+ValueError: sumnum must be greater than 0
+>>> b.integer_validator("sumnum", -4)
+Traceback (most recent call last):
+  ...
+ValueError: sumnum must be greater than 0
+>>> b.integer_validator("sumnum", "99")
+Traceback (most recent call last):
+  ...
+TypeError: sumnum must be an integer
+>>> b.integer_validator("sumnum", 99)
