@@ -48,4 +48,4 @@ class MyList(list):
         [3, 7, 5]
         """
 
-        print(sorted(self))
+        print(list(sorted(self)))
