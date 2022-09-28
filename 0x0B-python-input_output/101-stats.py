@@ -19,7 +19,6 @@ status_codes = {
 
 i = 0
 
-
 while True:
     try:
         line = sys.stdin.readline().rstrip("\n")
