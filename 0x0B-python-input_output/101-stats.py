@@ -2,6 +2,7 @@
 
 """
 Even I does'nt know what this program does
+Just another program that does a thing with a thing
 """
 
 import sys
