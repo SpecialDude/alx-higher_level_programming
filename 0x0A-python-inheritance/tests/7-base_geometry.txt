@@ -33,3 +33,16 @@ Traceback (most recent call last):
   ...
 TypeError: sumnum must be an integer
 >>> b.integer_validator("sumnum", 99)
+>>> b.integer_validator("num", 99.0)
+Traceback (most recent call last):
+  ...
+TypeError: num must be an integer
+>>> b.integer_validator("", 99)
+>>> b.integer_validator("", -3)
+Traceback (most recent call last):
+  ...
+ValueError:  must be greater than 0
+>>> b.area()
+Traceback (most recent call last):
+  ...
+Exception: area() is not implemented
