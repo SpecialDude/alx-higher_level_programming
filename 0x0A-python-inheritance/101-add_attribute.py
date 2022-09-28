@@ -12,5 +12,5 @@ def add_attribute(instance, name, value):
     if hasattr(instance, '__dict__'):
         setattr(instance, name, value)
 
-    if hasattr(instance, '__slot__'):
+    if hasattr(instance, '__slots__'):
         raise TypeError("can't add new attribute")
