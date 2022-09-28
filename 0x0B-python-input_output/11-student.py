@@ -52,4 +52,4 @@ class Student:
             None
         """
         for key, value in json.items():
-            self.__dict__.update({key, value})
+            self.__dict__[key] = value
