@@ -1,6 +1,20 @@
+#!/usr/bin/python3
+
+"""
+This module contains a function
+to generate Pascal Triangle
+"""
 
 
 def pascal_triangle(n):
+    """Generates pascal triangle up to n rows
+
+    Args:
+        n: number of row to generate
+
+    Returns:
+        Listof Pascal Triangle rows
+    """
 
     if n < 1:
         return []
@@ -18,5 +32,3 @@ def pascal_triangle(n):
         i += 1
 
     return p_list
-
-print(pascal_triangle(5))
