@@ -35,7 +35,9 @@ class Student:
         """
 
         if isinstance(attrs, list):
-            return \
-                {attr: self.__dict__[attr] for attr in attrs if attr in self.__dict__}
+            return {
+                attr: self.__dict__[attr]
+                for attr in attrs if attr in self.__dict__
+            }
 
         return self.__dict__
