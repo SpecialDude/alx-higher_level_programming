@@ -28,7 +28,6 @@ class TestBaseClass(unittest.TestCase):
         base2 = Base(10)
         base3 = Base(25)
 
-
         self.assertEqual(base.id, 5)
         self.assertEqual(base2.id, 10)
         self.assertEqual(base3.id, 25)
@@ -43,7 +42,6 @@ class TestBaseClass(unittest.TestCase):
         base5 = Base()
         base6 = Base(56)
 
-
         self.assertEqual(base.id, 98)
         self.assertEqual(base2.id, 1)
         self.assertEqual(base3.id, 2)
@@ -52,10 +50,13 @@ class TestBaseClass(unittest.TestCase):
         self.assertEqual(base6.id, 56)
 
     def test_shape_draw(self):
+        """Tests for shape drawing"""
+
         rect = Rectangle(100, 33, 0, 0, 10)
         sqr = Square(55, 4, 80, 89)
 
         Base.draw([rect], [sqr])
+
 
 if __name__ == "__main__":
     unittest.main()

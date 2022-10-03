@@ -11,7 +11,6 @@ from models.base import Base
 class Rectangle(Base):
     """A Rectangle class subclassing the Base class"""
 
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """Instance Instantiation
         Args:
@@ -132,7 +131,7 @@ class Rectangle(Base):
 
     def __repr__(self):
         """String representation of class"""
-        
+
         return self.__str__()
 
     def update(self, *args, **kwargs):
@@ -159,4 +158,3 @@ class Rectangle(Base):
             'y': self.y,
             'id': self.id
         }
-

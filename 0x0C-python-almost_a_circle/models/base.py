@@ -134,8 +134,9 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
+        """Draws shape using the turtle module"""
 
-        def draw_rect(w, h, turtle:turtle.Turtle):
+        def draw_rect(w, h, turtle):
             turtle.setheading(0)
             turtle.pendown()
             turtle.forward(w)
@@ -146,9 +147,7 @@ class Base:
             turtle.rt(90)
             turtle.forward(h)
 
-
-
-        def goto_position(x, y, turtle:turtle.Turtle):
+        def goto_position(x, y, turtle):
             turtle.penup()
             turtle.setposition(x, y)
 
@@ -173,7 +172,7 @@ class Base:
         myturtle.goto(0, 0)
         myturtle.pensize(3)
 
-        for rect in  list_rectangles:
+        for rect in list_rectangles:
             set_random_color(myturtle)
             goto_position(rect.x, rect.y, myturtle)
             draw_rect(rect.width, rect.height, myturtle)
@@ -181,17 +180,17 @@ class Base:
             goto_position(rect.x, rect.y + 40, myturtle)
             write_digits(rect.width, myturtle, distance=True, )
 
-            goto_position(rect.x - (len(str(rect.y) * 60)) - 20, rect.y, myturtle)
+            goto_position(
+                rect.x - (len(str(rect.y) * 60)) - 20, rect.y, myturtle
+            )
             write_digits(rect.height, myturtle, distance=True, )
 
-        for sqr in  list_squares:
+        for sqr in list_squares:
             set_random_color(myturtle)
             goto_position(sqr.x, sqr.y, myturtle)
             draw_rect(sqr.size, sqr.size, myturtle)
 
             goto_position(sqr.x + (sqr.width // 2), sqr.y + 40, myturtle)
             write_digits(sqr.size, myturtle, distance=True, )
-
-
 
         screen.mainloop()

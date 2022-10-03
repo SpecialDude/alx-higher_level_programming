@@ -1,3 +1,11 @@
+#!/usr/bin/python3
+
+"""
+This module contains some functions
+to draw numbers using turtle
+"""
+
+
 def draw_number(num, pen):
     if num == 0:
         #Draw zero

@@ -105,7 +105,7 @@ class TestSquareClass(unittest.TestCase):
 
     def test_serializers(self):
         """Test csv serializer"""
-        
+
         sqr = Square(3, 5, 6, 7)
         sqr2 = Square(40, 15, 20, 36)
         sqr3 = Square(12, 40, 5, 19)

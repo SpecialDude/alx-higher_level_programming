@@ -84,7 +84,7 @@ class TestRectangleClass(unittest.TestCase):
             Rectangle([-50], 15, 20, 30, 55)
 
         with self.assertRaises(TypeError, msg="height must be an integer", ):
-            Rectangle(10, {0:"height"}, 20, 30, 55)
+            Rectangle(10, {0: "height"}, 20, 30, 55)
 
         with self.assertRaises(TypeError, msg="x must be an integer", ):
             Rectangle(1, 15, ("Pos_x", 5), 30, 55)
@@ -183,6 +183,6 @@ class TestRectangleClass(unittest.TestCase):
         Rectangle.save_to_file_csv(objs)
         print(Rectangle.load_from_file_csv())
 
-        
+
 if __name__ == "__main__":
     unittest.main()

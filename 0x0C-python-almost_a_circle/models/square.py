@@ -5,7 +5,9 @@ Module contains a Square class subclassing
 the rectangle class
 """
 
+
 from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """A Square class subclassing rectangle"""
