@@ -24,8 +24,9 @@ def main():
     }
 
     i = 0
-    while True:
-        try:
+    try:
+        while True:
+
             if sys.stdin.isatty():
                 break
 
@@ -49,17 +50,17 @@ def main():
                     if value == 0:
                         continue
                     print("{}: {:d}".format(key, value))
-                    
+
                 i = 0
-        except KeyboardInterrupt:
-            print("File size: {}".format(file_size))
+    except KeyboardInterrupt:
+        print("File size: {}".format(file_size))
 
-            for key, value in status_codes.items():
-                if value == 0:
-                    continue
-                print("{}: {:d}".format(key, value))
+        for key, value in status_codes.items():
+            if value == 0:
+                continue
+            print("{}: {:d}".format(key, value))
 
-            raise
+        raise
 
 
 if __name__ == "__main__":
