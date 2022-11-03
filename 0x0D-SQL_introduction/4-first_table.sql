@@ -1,3 +1,3 @@
 -- Creates a table
 
-CREATE TABLE first_table IF NOT EXISTS;
+CREATE TABLE IF NOT EXISTS first_table;
