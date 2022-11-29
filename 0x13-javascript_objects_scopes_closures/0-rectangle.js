@@ -3,3 +3,4 @@
 class Rectangle {
 }
 
+export { Rectangle };
