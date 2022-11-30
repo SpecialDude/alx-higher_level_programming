@@ -33,7 +33,9 @@ class Square extends Rectangle {
   constructor (size) {
     super(size, size);
   }
+}
 
+class NewSquare extends Square {
   charPrint (c) {
     if (c === undefined) c = 'X';
     for (let i = 0; i < this.height; i++) {
@@ -45,4 +47,4 @@ class Square extends Rectangle {
   }
 }
 
-module.exports = Square;
+module.exports = NewSquare;
