@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 
 """This module lists all states from a  database"""
