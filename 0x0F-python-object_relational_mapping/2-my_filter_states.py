@@ -30,7 +30,10 @@ def main():
 
     cur = db.cursor()
 
-    cur.execute("SELECT id, name FROM states WHERE name = %s ORDERBY id", (statename, ))
+    cur.execute(
+        "SELECT id, name FROM states WHERE name = %s ORDERBY id",
+        (statename, )
+    )
     rows = cur.fetchall()
 
     for row in rows:
