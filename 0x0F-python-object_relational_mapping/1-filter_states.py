@@ -30,7 +30,7 @@ def main():
 
     cur = db.cursor()
 
-    cur.execute("SELECT id, name FROM states WHERE name LIKE N%")
+    cur.execute("SELECT id, name FROM states WHERE name LIKE 'N%'")
     rows = cur.fetchall()
 
     for row in rows:
