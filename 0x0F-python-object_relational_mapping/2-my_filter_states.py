@@ -31,7 +31,9 @@ def main():
     cur = db.cursor()
 
     cur.execute(
-        "SELECT id, name FROM states WHERE name = {} ORDERBY id".format(statename)
+        "SELECT id, name FROM states WHERE name = {} ORDERBY id".format(
+            statename
+        )
     )
     rows = cur.fetchall()
 
