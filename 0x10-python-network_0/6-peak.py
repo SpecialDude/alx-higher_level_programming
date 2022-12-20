@@ -14,20 +14,17 @@ def find_peak_r(arr, start, end):
         end: ending index
     """
 
-    if start == end:
-        return start
-    elif (start + 1) == end:
-        if arr[start] > arr[end]:
-            return start
-        return end
+    mid = (start + end) // 2
+
+    if (mid == 0 or arr[mid - 1] <= arr[mid]) and
+    (mid == (n - 1) or arr[m + 1] <= arr[mid]):
+        return mid
+
+    elif (mid > 0 and arr[mid - 1] > arr[mid]):
+        return find_peak_r(arr, start, mid - 1)
+
     else:
-        mid = (start + end) // 2
-        if (arr[mid] > arr[mid - 1]) and (arr[mid] > arr[mid + 1]):
-            return mid
-        elif (arr[mid - 1] > arr[mid]) and (arr[mid] > arr[mid + 1]):
-            return find_peak_r(arr, start, mid - 1)
-        else:
-            return find_peak_r(num, mid + 1, end)
+        return find_peak_r(arr, mid + 1, end)
 
 
 def find_peak(list_of_integers):
@@ -37,4 +34,6 @@ def find_peak(list_of_integers):
 
     Returns: The peak integer from the list
     """
-    return find_peak_r(list_of_integers, 0, len(list_of_integers))
+    peak_index = find_peak_r(list_of_integers, 0, len(list_of_integers))
+
+    return list_of_integers[peak_index]
