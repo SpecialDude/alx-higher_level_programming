@@ -2,7 +2,7 @@
 
 // This Program make request to a starwars api for fetching all characters
 
-const request = require('request-promise');
+const request = require('request-promise-native');
 
 if (process.argv.length < 3) { process.exit(); }
 
