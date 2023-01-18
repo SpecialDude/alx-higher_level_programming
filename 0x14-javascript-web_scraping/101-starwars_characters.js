@@ -2,7 +2,7 @@
 
 // This Program make request to a starwars api for fetching all characters
 
-const request = require('request-promise-native');
+const request = require('request');
 
 if (process.argv.length < 3) { process.exit(); }
 
@@ -10,19 +10,24 @@ const movieId = process.argv[2];
 
 const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
-async function printName (url) {
-  await request(url, function (error, response, body) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log(JSON.parse(body).name);
-    }
+function printName (url) {
+  const promise = new Promise(function (resolve, reject) {
+    request(url, function (error, response, body) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log(JSON.parse(body).name);
+        resolve(body);
+      }
+    });
   });
+  return promise;
 }
 
-function loadURL (urlList) {
+async function loadURL (urlList) {
   for (let i = 0; i < urlList.length; i++) {
-    printName(urlList[i]);
+    await printName(urlList[i]);
   }
 }
 
