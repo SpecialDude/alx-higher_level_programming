@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-// This Program opens a file and write into it
+// This Program opens a file and write response body to it
 
 const fs = require('fs');
 const request = require('request');
