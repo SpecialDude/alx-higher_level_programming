@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const logme = require('./9-logme').logme;
+const logme = require('./9-logme').logMe;
 
 logme("Hello");
 logme("Best");
