@@ -1,8 +1,15 @@
 #!/usr/bin/node
 
-counter = 0;
+function * numbergen () {
+  let num = 0;
+
+  while (true) {
+    yield num++;
+  }
+}
+
+const ngen = numbergen();
 
 exports.logme = function (item) {
-  console.log(`${counter}: ${item}`);
-  counter++;
+  console.log(`${ngen.next().value}: ${item}`);
 };
