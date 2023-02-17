@@ -11,5 +11,5 @@ function * numbergen () {
 const ngen = numbergen();
 
 exports.logme = function (item) {
-  console.log(`${ngen.next().value}: ${item}`);
+  console.log(ngen.next().value + ': ' + item);
 };
