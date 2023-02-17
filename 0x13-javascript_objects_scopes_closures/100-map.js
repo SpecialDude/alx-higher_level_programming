@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-const list = require('./100-data').list;
+const array = require('./100-data').list;
 
-console.log(list);
+console.log(array);
 let counter = 0;
 
-console.log(list.map(function (x) {
+console.log(array.map(function (x) {
   return x * counter++;
 }));
